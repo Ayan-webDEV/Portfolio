@@ -1,0 +1,79 @@
+nav {
+  background-color: var(--background-color);
+  width: 100%;
+  padding: 16px 0 0 0;
+  box-shadow: var(--nav-shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logoCont {
+  font-family: "Days One", sans-serif;
+  user-select: none;
+}
+.mobHidden {
+  display: none;
+}
+
+.mobSections {
+  margin: 16px 0 0 0;
+}
+.mobVisible {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 13px 0 !important;
+}
+.mobVisibleDark {
+  background-color: #141f38;
+}
+.mobVisibleLight {
+  background-color: #f0f0f0;
+}
+.mobSt {
+  font-size: 15px !important;
+  padding: 0 !important;
+}
+
+.navSections {
+  color: #ffffff;
+  margin: 0 1.57vw;
+  font-size: 17px;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+.activeLink {
+  border-bottom: 3px solid var(--accent-primary);
+  padding-bottom: 3px;
+}
+.navSections:hover {
+  color: var(--text-gray) !important;
+}
+.lightMode {
+  color: #111827 !important;
+  letter-spacing: 1.3px;
+}
+.togglerNight {
+  margin: 0 0 0 25px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.togglerDay {
+  margin: 0 0 0 32px;
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  nav {
+    padding: 16px 0;
+  }
+  .mobHidden {
+    display: block;
+  }
+  .mobSections {
+    display: none;
+  }
+}

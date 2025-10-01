@@ -1,0 +1,27 @@
+:root {
+  /* Light Theme */
+  --background-color: #ffffff;
+  --accent-primary: #ec4899;
+  --accent-secondary: #10b981;
+  --text-color: #111827;
+  --text-gray: #6b7280;
+  --font-family: "Roboto", sans-serif;
+  --nav-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  --background-color: #0f172a;
+  --accent-primary: #38bdf8;
+  --accent-secondary: #facc15;
+  --text-color: #ffffff;
+  --text-gray: #94a3b8;
+  --font-family: "Montserrat", sans-serif;
+  --nav-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
