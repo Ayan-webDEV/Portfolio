@@ -12,6 +12,10 @@ nav {
   font-family: "Days One", sans-serif;
   user-select: none;
 }
+.logo {
+  margin: 0;
+  font-size: 26px;
+}
 .mobHidden {
   display: none;
 }
@@ -45,35 +49,74 @@ nav {
 }
 .activeLink {
   border-bottom: 3px solid var(--accent-primary);
-  padding-bottom: 3px;
+  padding-bottom: 5px;
 }
 .navSections:hover {
   color: var(--text-gray) !important;
 }
 .lightMode {
-  color: #111827 !important;
+  color: #0c111d !important;
   letter-spacing: 1.3px;
+}
+.togglerbtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 .togglerNight {
   margin: 0 0 0 25px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
+  font-size: 30px;
 }
 .togglerDay {
   margin: 0 0 0 32px;
-  font-size: 18px;
+  font-size: 22px;
+}
+
+@media (max-width: 370px) {
+  .mobSt {
+    font-size: 13px !important;
+  }
+}
+
+@media (min-width: 575px) {
+  .logo {
+    font-size: 34px;
+  }
+  .mobVisible {
+    padding: 20px 0 !important;
+  }
+  .navSections {
+    font-size: 22px !important;
+  }
+  .togglerDay {
+    font-size: 27px;
+  }
+  .togglerNight {
+    font-size: 34px;
+  }
 }
 
 @media (min-width: 992px) {
   nav {
-    padding: 16px 0;
+    padding: 20px 0;
+  }
+  .navSections {
+    font-size: 18px !important;
+  }
+  .logo {
+    font-size: 30px;
   }
   .mobHidden {
-    display: block;
+    display: flex;
+    align-items: center;
   }
   .mobSections {
     display: none;
+  }
+  .togglerDay {
+    font-size: 20px;
+  }
+  .togglerNight {
+    font-size: 26px;
   }
 }

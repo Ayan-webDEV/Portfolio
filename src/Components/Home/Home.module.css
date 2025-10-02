@@ -1,0 +1,166 @@
+.homeContentContainer {
+  text-align: center;
+}
+.homeContHds1,
+.homeContHds2 {
+  font-family: "poppins", sans-serif;
+}
+
+.homeContHds1 {
+  font-size: clamp(2rem, 5.5vw, 3rem);
+  font-weight: 700;
+}
+.homeContHds2 {
+  font-size: clamp(1.5rem, 4.5vw, 2rem);
+  color: var(--accent-primary);
+  font-weight: 500;
+}
+
+.homeContPara {
+  font-family: "inter";
+  font-size: clamp(1.07rem, 3.5vw, 1.3rem);
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+.reactIcon {
+  color: #61dafb;
+  margin: 0 4px 0 10px;
+}
+.reactIconLght {
+  color: #0284c7;
+  margin: 0 4px 0 10px;
+}
+.javaIcon {
+  color: #e76f00;
+  margin: 0 4px 0 10px;
+}
+
+.buttonCont {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.projectsBtn,
+.resumeBtn {
+  background-color: var(--accent-primary);
+  color: var(--accent-text);
+  padding: 0.57rem 1.4rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.btnsLight {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
+}
+.projectsBtn:hover,
+.resumeBtn:hover {
+  background-color: var(--accent-text);
+  color: var(--accent-primary);
+  transform: scale(1.047);
+  box-shadow: 0 0 22px var(--accent-primary);
+}
+.projectsBtn:active,
+.resumeBtn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.25),
+    0 0 10px var(--accent-primary);
+}
+.projectsBtn {
+  text-decoration: none;
+  margin: 0 5vw 0 0;
+}
+
+.socialsCont {
+  padding: 2.5rem 0 0 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.socials {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.socials:hover {
+  color: var(--accent-secondary);
+  transform: scale(1.08);
+}
+
+@media (min-width: 575px) {
+  .homeContHds1 {
+    margin: 9.5vh 0 0.7rem 0;
+    font-size: 7vw;
+  }
+  .homeContHds2 {
+    font-size: 4.9vw;
+    margin: 1.5rem 0 4rem 0;
+  }
+  .homeContPara {
+    font-size: 3.67vw;
+    margin: 0 0 3.7rem 0;
+  }
+
+  .projectsBtn,
+  .resumeBtn {
+    width: 65%;
+    padding: 1.2rem 1.41rem;
+    font-size: 1.57rem;
+    border-radius: 18px;
+  }
+  .projectsBtn {
+    margin: 0 0 5.5vw 0;
+  }
+  .socialsCont {
+    padding: 3.8rem 0 2rem 0;
+    font-size: 1.67rem;
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .homeContentContainer {
+    text-align: left;
+  }
+  .homeContHds1 {
+    margin: 9vh 0 0.4rem 0;
+    font-size: 3.27rem;
+  }
+  .homeContHds2 {
+    font-size: 2rem;
+    margin: 0.8rem 0 2.6rem 0;
+  }
+  .homeContPara {
+    font-size: 1.34rem;
+    margin: 0 0 2.35rem 0;
+  }
+
+  .buttonCont {
+    flex-direction: row;
+  }
+  .projectsBtn,
+  .resumeBtn {
+    width: auto;
+    padding: 0.67rem 1.7rem;
+    font-size: 1.3rem;
+    border-radius: 18px;
+  }
+  .projectsBtn {
+    margin: 0 5vw 0 0;
+  }
+  .socialsCont {
+    padding: 2.7rem 0 0 0;
+    font-size: 1.4rem;
+    justify-content: start;
+    gap: 3rem;
+  }
+}
