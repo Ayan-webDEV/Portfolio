@@ -46,7 +46,8 @@
 .projectsBtn,
 .resumeBtn {
   width: 85%;
-  background-color: var(--accent-primary);
+  /* background-color: var(--accent-primary); */
+  background-color: red;
   color: var(--accent-text);
   padding: 0.7rem 1.4rem;
   font-size: 4.75vw;
