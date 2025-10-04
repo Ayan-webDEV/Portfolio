@@ -1,3 +1,5 @@
+/* --------------------------------------------- Text Section ---------------------------------------- */
+
 .homeContentContainer {
   text-align: center;
 }
@@ -7,21 +9,21 @@
 }
 
 .homeContHds1 {
-  margin: 9.7vw 0 3.07vw 0;
+  margin: 14.4vw 0 3.57vw 0;
   font-size: 10.17vw;
   font-weight: 700;
 }
 .homeContHds2 {
-  margin: 0 0 9.07vw 0;
+  margin: 0 0 11.7vw 0;
   font-size: 6.07vw;
   color: var(--accent-primary);
   font-weight: 500;
 }
 
 .homeContPara {
-  margin: 0 0 9.47vw 0;
+  margin: 0 0 13vw 0;
   font-family: "inter", sans-serif;
-  font-size: 4.37vw;
+  font-size: 4.17vw;
   color: var(--text-secondary);
   font-weight: 400;
 }
@@ -37,6 +39,8 @@
   color: #e76f00;
   margin: 0 4px 0 10px;
 }
+
+/* --------------------------------------------------- Button ------------------------------------------- */
 
 .buttonCont {
   display: flex;
@@ -61,7 +65,7 @@
 
 .projectsBtn {
   text-decoration: none;
-  margin: 0 0 7.7vw 0;
+  margin: 0 0 10vw 0;
 }
 .btnsLight {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
@@ -81,8 +85,10 @@
     0 0 10px var(--accent-primary);
 }
 
+/* ------------------------------------------------ Socials ---------------------------------------------- */
+
 .socialsCont {
-  padding: 9vw 0 2vw 0;
+  padding: 14.5vw 0 16vw;
   font-size: 4.4vw;
   font-weight: 500;
   display: flex;
@@ -100,18 +106,62 @@
   transform: scale(1.08);
 }
 
+/* ---------------------------------------------- Illustration -------------------------------------------- */
+
+.homeIllustrationCont {
+  margin: 5vw 0 11vw;
+  height: 52vw;
+  width: 94%;
+}
+.homeIllustration {
+  height: 100%;
+  width: 100%;
+  filter: drop-shadow(0 0 12px var(--accent-primary));
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+  animation: float 5.5s ease-in-out infinite;
+}
+.homeIllustration:hover {
+  animation-play-state: paused;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 24px #00ffff);
+}
+.homelightIllustration:hover {
+  filter: drop-shadow(0 0 17px var(--accent-secondary));
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ---------------------------------------------- MEDIA QUERY -------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  .homeIllustration {
+    animation: none;
+  }
+}
+
 @media (min-width: 575px) {
   .homeContHds1 {
-    margin: 8vh 0 0.7rem 0;
+    margin: 9.4vh 0 0.7rem 0;
     font-size: 7vw;
   }
   .homeContHds2 {
     font-size: 4.9vw;
-    margin: 1.5rem 0 4rem 0;
+    margin: 1.5rem 0 4.4rem 0;
   }
   .homeContPara {
     font-size: 3.67vw;
-    margin: 0 0 3.7rem 0;
+    margin: 0 0 4.5rem 0;
   }
 
   .projectsBtn,
@@ -122,12 +172,17 @@
     border-radius: 18px;
   }
   .projectsBtn {
-    margin: 0 0 5.5vw 0;
+    margin: 0 0 6vw 0;
   }
   .socialsCont {
-    padding: 3.8rem 0 2rem 0;
+    padding: 4.6rem 0 3.9rem 0;
     font-size: 3.15vw;
     gap: 4rem;
+  }
+  .homeIllustrationCont {
+    margin: 5vw 0;
+    height: 49.7vw;
+    width: 95%;
   }
 }
 
@@ -144,7 +199,7 @@
     margin: 0.8rem 0 2.6rem 0;
   }
   .homeContPara {
-    font-size: 1.34rem;
+    font-size: 1.14rem;
     margin: 0 0 2.35rem 0;
   }
 
@@ -165,5 +220,24 @@
     font-size: 1.4rem;
     justify-content: start;
     gap: 3rem;
+  }
+  .homeIllustrationCont {
+    margin: 13.5vh 0 0 0;
+    height: 24vw;
+    width: 36.7vw;
+  }
+}
+
+@media (min-width: 1400px) {
+  .homeContHds1 {
+    margin-top: 12vh;
+  }
+  .homeContPara {
+    margin-right: 4vw;
+  }
+  .homeIllustrationCont {
+    margin-top: 14.5vh;
+    height: 350px;
+    width: 500px;
   }
 }

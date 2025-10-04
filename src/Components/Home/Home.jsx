@@ -7,6 +7,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaReact } from "react-icons/fa";
 import { RiJavaLine } from "react-icons/ri";
+import logo from "../../assets/logo.png";
 
 const Home = () => {
   const { darkMode } = useTheme();
@@ -112,7 +113,17 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-5"></div>
+            <div className="d-flex justify-content-center col-12 col-lg-5 px-lg-0">
+              <div className={style.homeIllustrationCont}>
+                <img
+                  src={logo}
+                  className={`${style.homeIllustration} ${
+                    !darkMode && style.homelightIllustration
+                  }`}
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

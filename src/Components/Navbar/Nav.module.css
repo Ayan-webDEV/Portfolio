@@ -26,7 +26,7 @@ nav {
 .mobVisible {
   display: flex;
   justify-content: space-evenly;
-  padding: 16px 0 !important;
+  padding: 17px 0 !important;
 }
 .mobVisibleDark {
   background-color: #141f38;

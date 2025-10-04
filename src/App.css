@@ -4,6 +4,7 @@
   --background-color: #fefefe;
   --accent-primary: #f97316;
   --accent-secondary: #3b86dd; /*change this color #169cf9*/
+  --selection-background: #f97316;
   --accent-text: #ffffff;
   --text-color: #0f1522;
   --text-gray: #6b7280;
@@ -17,6 +18,7 @@
   --accent-primary: #38bdf8;
   --accent-secondary: #facc15;
   --accent-text: #111111;
+  --selection-background: #facc15;
   --text-color: #ffffff;
   --text-gray: #94a3b8;
   --bracket: #fff;
@@ -29,6 +31,11 @@ body {
   color: var(--text-color);
   font-family: var(--font-family);
   transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+::selection {
+  background-color: var(--selection-background);
+  color: #fff;
 }
 
 @media (min-width: 1400px) {
