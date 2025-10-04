@@ -8,7 +8,7 @@ import { MdEmail } from "react-icons/md";
 import { FaReact } from "react-icons/fa";
 import { RiJavaLine } from "react-icons/ri";
 
-import logo from "../../assets/logo.webp";
+import logo from "../../assets/ayan-full-stack-web-developer-illustration.webp";
 
 const Home = () => {
   const { darkMode } = useTheme();
@@ -121,7 +121,8 @@ const Home = () => {
                   className={`${style.homeIllustration} ${
                     !darkMode && style.homelightIllustration
                   }`}
-                  alt=""
+                  alt="Ayan – Full Stack Web Developer working on code illustration for personal portfolio"
+                  title="Ayan – Full Stack Web Developer"
                 />
               </div>
             </div>
