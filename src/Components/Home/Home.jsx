@@ -7,7 +7,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { FaReact } from "react-icons/fa";
 import { RiJavaLine } from "react-icons/ri";
-import logo from "../../assets/logo.png";
+
+import logo from "../../assets/logo.webp";
 
 const Home = () => {
   const { darkMode } = useTheme();
