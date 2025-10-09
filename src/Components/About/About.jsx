@@ -19,10 +19,12 @@ const About = () => {
         <div className="container">
           <Hedding hds={"About Me"} cursor={"_"} />
           <div>
-            <div className="row mt-2 align-items-center">
-              <div className="col-12 col-lg-5 ">
-                <div className={style.profilePicCont}>
-                  <img src={profilePic} className={style.profilePic} alt="" />
+            <div className="row mt-2 align-items-center justify-content-center">
+              <div className="col-12 col-lg-5 my-5">
+                <div className="d-flex justify-content-center my-3">
+                  <div className={style.profilePicCont}>
+                    <img src={profilePic} className={style.profilePic} alt="" />
+                  </div>
                 </div>
               </div>
               <div className="col-12 col-lg-7">
