@@ -3,7 +3,7 @@ import Hedding from "../CommonComponent/Hedding";
 import EducationAndCertifications from "./EducationAndCertifications";
 
 import profilePic from "../../assets/ayan-profile-pic.png";
-
+import { useTheme } from "../../ContextStore/ContextStore";
 import { useState } from "react";
 import { FaLaptopCode } from "react-icons/fa6";
 import { FaLightbulb } from "react-icons/fa6";
@@ -11,6 +11,8 @@ import { FaCogs } from "react-icons/fa";
 import { FaSeedling } from "react-icons/fa6";
 
 const About = () => {
+  const { darkMode } = useTheme();
+
   const [showMore, setShowMore] = useState(false);
 
   return (
@@ -23,7 +25,13 @@ const About = () => {
               <div className="col-12 col-lg-5 my-5">
                 <div className="d-flex justify-content-center my-3">
                   <div className={style.profilePicCont}>
-                    <img src={profilePic} className={style.profilePic} alt="" />
+                    <img
+                      src={profilePic}
+                      className={`${style.profilePic} ${
+                        !darkMode && style.profileLight
+                      }`}
+                      alt=""
+                    />
                   </div>
                 </div>
               </div>

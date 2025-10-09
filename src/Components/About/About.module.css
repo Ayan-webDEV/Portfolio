@@ -41,4 +41,8 @@
   object-position: center 0%; /* move image slightly down */
   /* box-shadow: 0 0 25px rgba(59, 223, 255, 0.3); */
   box-shadow: 0 0 45px var(--accent-primary);
+  filter: brightness(1.12); /* 10% brighter */
+}
+.profileLight {
+  box-shadow: 0 0 45px var(--accent-secondary);
 }
