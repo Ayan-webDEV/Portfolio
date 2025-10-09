@@ -1,0 +1,78 @@
+.hedding {
+  margin: 0 0 6px 0;
+  font-family: "poppins", "Roboto", sans-serif;
+  font-size: 6.1vw;
+}
+.cursor {
+  animation: blink 1.5s ease-in-out infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.common {
+  height: 6px;
+  background-color: var(--accent-primary);
+  border-radius: 25px;
+}
+
+.hightlightTextLong1 {
+  width: 82px;
+}
+.hightlightTextLong2 {
+  margin: 4.5px 0 0 0;
+  width: 40px;
+}
+
+.hightlightTextshort1 {
+  width: 45px;
+}
+.hightlightTextShort2 {
+  margin: 4px 0 0 0;
+  width: 24px;
+}
+
+@media (min-width: 575px) {
+  .hedding {
+    font-size: 3.97vw;
+  }
+
+  .hightlightTextLong1 {
+    width: 100px;
+  }
+  .hightlightTextLong2 {
+    margin: 4px 0 0 0;
+    width: 55px;
+  }
+
+  .hightlightTextshort1 {
+    width: 52px;
+  }
+  .hightlightTextShort2 {
+    margin: 4px 0 0 0;
+    width: 28px;
+  }
+}
+
+@media (min-width: 992px) {
+  .hedding {
+    font-size: 2.1vw;
+  }
+
+  .hightlightTextLong1 {
+    width: 92px;
+  }
+  .hightlightTextLong2 {
+    width: 50px;
+  }
+
+  .hightlightTextshort1 {
+    width: 46px;
+  }
+  .hightlightTextShort2 {
+    width: 27px;
+  }
+}

@@ -5,6 +5,7 @@
   --accent-primary: #f97316;
   --accent-secondary: #3b86dd; /*change this color #169cf9*/
   --selection-background: #f97316;
+  --divider: #f1f1f1;
   --accent-text: #ffffff;
   --text-color: #0f1522;
   --text-gray: #6b7280;
@@ -17,8 +18,9 @@
   --background-color: #0f172a;
   --accent-primary: #38bdf8;
   --accent-secondary: #facc15;
-  --accent-text: #111111;
   --selection-background: #facc15;
+  --divider: #111e3b;
+  --accent-text: #111111;
   --text-color: #ffffff;
   --text-gray: #94a3b8;
   --bracket: #fff;
