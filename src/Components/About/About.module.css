@@ -93,6 +93,8 @@ strong {
 }
 .circle:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 60px var(--accent-primary),
+    inset 0 0 10px rgba(255, 255, 255, 0.1);
 }
 .picProfile {
   position: absolute;
@@ -102,7 +104,7 @@ strong {
   height: 375px;
   width: 300px;
   filter: brightness(1.07);
-  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 1));
   user-select: none;
 }
 
