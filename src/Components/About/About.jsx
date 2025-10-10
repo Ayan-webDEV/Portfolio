@@ -3,6 +3,7 @@ import Hedding from "../CommonComponent/Hedding";
 import EducationAndCertifications from "./EducationAndCertifications";
 
 import profilePic from "../../assets/ayan-profile-pic.png";
+import profilePic2 from "../../assets/ayan-profile-pic-2.png";
 import { useTheme } from "../../ContextStore/ContextStore";
 import { useState } from "react";
 import { FaLaptopCode } from "react-icons/fa6";
@@ -21,9 +22,9 @@ const About = () => {
         <div className="container">
           <Hedding hds={"About Me"} cursor={"_"} />
           <div>
-            <div className="row mt-2 align-items-center justify-content-center">
-              <div className="col-12 col-lg-5 my-5">
-                <div className="d-flex justify-content-center my-3">
+            <div className="row mt-4 pt-2 align-items-center justify-content-center ">
+              <div className="col-12 col-lg-5 d-flex justify-content-center justify-content-lg-start">
+                {/* <div className="d-flex my-3 justify-content-center justify-content-lg-start">
                   <div className={style.profilePicCont}>
                     <img
                       src={profilePic}
@@ -33,24 +34,29 @@ const About = () => {
                       alt=""
                     />
                   </div>
+                </div> */}
+                <div
+                  className={`${style.circle} ${!darkMode && style.circleLgt}`}
+                >
+                  <img src={profilePic2} className={style.picProfile} alt="" />
                 </div>
               </div>
               <div className="col-12 col-lg-7">
                 <header>
-                  <h1>
+                  <h1 className={style.AboutHds}>
                     👋 Hey there! I’m{" "}
-                    <span style={{ color: "var(--accent-primary)" }}>
+                    <span>
                       {" "}
-                      <strong>Ayan</strong>{" "}
+                      <strong style={{ color: "var(--accent-primary)" }}>
+                        Ayan
+                      </strong>{" "}
                     </span>
                   </h1>
                   <p className="subtitle">
                     A passionate <strong>Java Full Stack Web Developer</strong>{" "}
                     currently pursuing my{" "}
-                    <strong>
-                      Diploma in Computer Science Engineering (5th Semester)
-                    </strong>
-                    .
+                    <strong>Diploma in Computer Science Engineering</strong>{" "}
+                    (5th Semester) .
                   </p>
                 </header>
 
@@ -69,14 +75,14 @@ const About = () => {
                       <strong>
                         responsive, scalable, and performance-driven web
                         applications
-                      </strong>
+                      </strong>{" "}
                       with clean UI and efficient backend logic. My development
                       stack bridges both worlds —
                     </span>
                   </p>
 
-                  <ul className="list-unstyled d-flex justify-content-evenly">
-                    <div>
+                  <ul className={style.stackList}>
+                    <div className={style.stackListCont}>
                       <li>
                         <strong>Frontend</strong>
                       </li>
@@ -104,9 +110,11 @@ const About = () => {
                       <FaCogs />
                     </span>
                     <span className="ms-1 ps-1">
-                      With strong fundamentals in Java, OOP concepts, and modern
-                      web architecture, I build robust, maintainable, and
-                      user-focused applications.
+                      With strong fundamentals in Java,{" "}
+                      <strong>OOP concepts</strong>, and modern web
+                      architecture, I build{" "}
+                      <strong>robust, maintainable</strong>, and{" "}
+                      <strong> user-focused applications</strong>.
                     </span>
                   </p>
                   <p className="d-flex">
@@ -115,8 +123,8 @@ const About = () => {
                     </span>{" "}
                     <span className="ms-1 ps-1">
                       I’m constantly learning and refining my skills — exploring
-                      new tools, contributing to projects, and coding with
-                      purpose.{" "}
+                      new tools, contributing to <strong>projects,</strong> and
+                      <strong> coding</strong> with <strong>purpose</strong>.{" "}
                       <span
                         className={`${showMore && "d-none"} ${
                           style.extendContent
@@ -137,15 +145,18 @@ const About = () => {
                 }`}
               >
                 I am passionate about what I do and driven by a constant desire
-                to grow. I actively explore new frameworks, tools, and
-                methodologies to sharpen my skills and deliver innovative,
-                scalable solutions that stand the test of time.
+                to <strong>grow</strong>. I actively explore{" "}
+                <strong>new frameworks, tools, and methodologies</strong> to
+                sharpen my skills and deliver{" "}
+                <strong>innovative, scalable solutions </strong>
+                that stand the test of time.
                 <br />
                 <span className="d-block pt-2 mt-1">
-                  My goal is to become a versatile developer who not only crafts
-                  high-quality applications but also drives innovation by
-                  creating digital products that solve real problems and enrich
-                  user experiences.{" "}
+                  My goal is to become a <strong>versatile developer</strong>{" "}
+                  who not only crafts <strong>high-quality applications</strong>{" "}
+                  but also <strong>drives innovation</strong> by creating
+                  <strong> digital products</strong> that solve real problems
+                  and <strong>enrich user experiences</strong>.{" "}
                   <span
                     className={` ${style.extendContent}`}
                     onClick={() => setShowMore(!showMore)}
