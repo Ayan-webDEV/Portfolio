@@ -102,7 +102,7 @@ strong {
   height: 375px;
   width: 300px;
   filter: brightness(1.07);
-  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 1));
   user-select: none;
 }
 
