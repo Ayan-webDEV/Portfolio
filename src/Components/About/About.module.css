@@ -87,8 +87,8 @@ strong {
   cursor: pointer;
 }
 .circleLgt {
-  background-color: #fc8f42;
-  box-shadow: 0 0 60px rgba(255, 138, 55, 1),
+  background-color: #ff9d57;
+  box-shadow: 0 0 60px rgba(255, 138, 55, 0.9),
     inset 0 0 10px rgba(255, 138, 55, 0.5);
 }
 .circle:hover {
@@ -102,7 +102,7 @@ strong {
   height: 375px;
   width: 300px;
   filter: brightness(1.07);
-  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.1));
+  filter: drop-shadow(0 0 24px rgba(255, 255, 255, 0.4));
   user-select: none;
 }
 
