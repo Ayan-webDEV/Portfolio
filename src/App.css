@@ -5,6 +5,7 @@
   --accent-primary: #f97316;
   --accent-secondary: #3b86dd; /*change this color #169cf9*/
   --selection-background: #f97316;
+  --card-background: #f5f5f5;
   --divider: #f1f1f1;
   --accent-text: #ffffff;
   --text-color: #0f1522;
@@ -19,6 +20,7 @@
   --accent-primary: #38bdf8;
   --accent-secondary: #facc15;
   --selection-background: #facc15;
+  --card-background: #253457;
   --divider: #111e3b;
   --accent-text: #111111;
   --text-color: #ffffff;
