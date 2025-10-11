@@ -2,7 +2,7 @@ import style from "./About.module.css";
 import Hedding from "../CommonComponent/Hedding";
 import EducationAndCertifications from "./EducationAndCertifications";
 
-import profilePic from "../../assets/ayan-profile-pic.png";
+// import profilePic from "../../assets/ayan-profile-pic.png";
 import profilePic2 from "../../assets/ayan-profile-pic-2.png";
 import { useTheme } from "../../ContextStore/ContextStore";
 import { useState } from "react";
