@@ -27,7 +27,7 @@ const Education = () => {
 
   return (
     <div>
-      <h3 className="m-0 d-flex align-items-center">
+      <h3 className="m-0 d-flex align-items-center fw-bold">
         <FaGraduationCap
           className="me-3"
           style={{ color: "var(--accent-primary)" }}
