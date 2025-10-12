@@ -7,8 +7,6 @@ import { FaRegMoon } from "react-icons/fa";
 const Nav = () => {
   const { darkMode, handleToggleMode } = useTheme();
 
-  // const [darkMode, setDarkMode] = useState(true);
-
   const [active, setActive] = useState("#home");
 
   useEffect(() => {
@@ -17,8 +15,6 @@ const Nav = () => {
       darkMode ? "dark" : "light"
     );
   }, [darkMode]);
-
-  // const handleToggleMode = () => setDarkMode(!darkMode);
 
   const navSections = [
     { id: 1, name: "Home", href: "#home" },
