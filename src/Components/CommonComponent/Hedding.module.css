@@ -1,4 +1,5 @@
 .hedding {
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0 0 6px 0;
@@ -10,9 +11,13 @@
   cursor: pointer;
 }
 .sklCursor {
+  animation: blink 2s ease-in-out infinite;
+  position: absolute;
+  bottom: 11px;
+  left: 6.1%;
   display: inline-block;
   margin: 0 0 0 5px;
-  font-size: 36px;
+  font-size: 28px;
   transform: rotate(-90deg);
 }
 @keyframes blink {
