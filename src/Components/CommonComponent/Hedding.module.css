@@ -13,8 +13,8 @@
 .sklCursor {
   animation: blink 3s ease-in-out infinite;
   position: absolute;
-  bottom: 11px;
-  left: 15vw;
+  bottom: 8px;
+  left: 14.3vw;
   font-size: 7vw;
   display: inline-block;
   margin: 0 0 0 5px;
@@ -54,6 +54,7 @@
   }
 
   .sklCursor {
+    bottom: 10px;
     left: 9.17vw;
     font-size: 3.8vw;
   }
