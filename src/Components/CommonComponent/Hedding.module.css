@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 .sklCursor {
-  animation: blink 2s ease-in-out infinite;
+  animation: blink 3s ease-in-out infinite;
   position: absolute;
   bottom: 11px;
   left: 15vw;
