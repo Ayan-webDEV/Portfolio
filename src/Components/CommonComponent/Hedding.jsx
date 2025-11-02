@@ -3,6 +3,8 @@ import style from "./Hedding.module.css";
 const Hedding = ({ hds, cursor }) => {
   let count = hds.length;
 
+  let skl = cursor === "»";
+  console.log(skl);
   // console.log(count);  //just for debuging
 
   return (
@@ -10,7 +12,9 @@ const Hedding = ({ hds, cursor }) => {
       <div>
         <h2 className={style.hedding}>
           {hds}
-          <span className={style.cursor}>{cursor}</span>
+          <span className={`${style.cursor} ${skl && style.sklCursor}`}>
+            {cursor}
+          </span>
         </h2>
       </div>
       <div

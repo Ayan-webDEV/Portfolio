@@ -1,4 +1,6 @@
 .hedding {
+  display: flex;
+  align-items: center;
   margin: 0 0 6px 0;
   font-family: "poppins", "Roboto", sans-serif;
   font-size: 6.1vw;
@@ -6,7 +8,12 @@
 .cursor {
   animation: blink 1.5s ease-in-out infinite;
 }
-
+.sklCursor {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  font-size: 36px;
+  transform: rotate(-90deg);
+}
 @keyframes blink {
   50% {
     opacity: 0;
