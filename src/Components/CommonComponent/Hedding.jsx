@@ -4,7 +4,7 @@ const Hedding = ({ hds, cursor }) => {
   let count = hds.length;
 
   let skl = cursor === "»";
-  console.log(skl);
+  // console.log(skl);
   // console.log(count);  //just for debuging
 
   return (
