@@ -7,6 +7,7 @@
 }
 .cursor {
   animation: blink 1.5s ease-in-out infinite;
+  cursor: pointer;
 }
 .sklCursor {
   display: inline-block;
