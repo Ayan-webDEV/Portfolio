@@ -222,7 +222,7 @@ const Skills = () => {
             </h4>
           </div>
           <h1
-            className="pt-4 my-5 pb-lg-1"
+            className={`my-5 pb-lg-1 ${style.technicalHds}`}
             style={{
               textAlign: "center",
               fontFamily: "poppins, Roboto, sans-serif ",
@@ -301,6 +301,12 @@ const Skills = () => {
                             }`}
                           >
                             <h6
+                              style={{
+                                borderBottom: !darkMode
+                                  ? "1.5px solid #272727ff"
+                                  : "1.5px solid #e1e1e1ff",
+                                paddingBottom: "7px",
+                              }}
                               className={`mb-2 ${
                                 skill.id === 2 && idx === 4
                                   ? darkMode
@@ -322,7 +328,7 @@ const Skills = () => {
                                 {list}
                               </span>
                             </h6>
-                            <p className="m-0 fw-medium">
+                            <p className="m-0 pt-1 fw-medium">
                               {skill.description[idx]}
                             </p>
                           </div>
