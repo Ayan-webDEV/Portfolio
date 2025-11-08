@@ -2,6 +2,9 @@
   /* Light Theme */
   /* --background-color: #ffffff; */
   --background-color: #fefefe;
+  --overlay-bg: #141414;
+  --overlay-text: #f8f8f8;
+  --overlay-hds: #38bdf8;
   --accent-primary: #f97316;
   --accent-secondary: #3b86dd; /*change this color #169cf9*/
   --selection-background: #f97316;
@@ -17,6 +20,9 @@
 
 [data-theme="dark"] {
   --background-color: #0f172a;
+  --overlay-bg: #f8f8f8;
+  --overlay-text: #141414;
+  --overlay-hds: #f97316;
   --accent-primary: #38bdf8;
   --accent-secondary: #facc15;
   --selection-background: #facc15;
