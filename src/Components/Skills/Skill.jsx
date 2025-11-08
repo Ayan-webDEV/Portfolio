@@ -322,7 +322,9 @@ const Skills = () => {
                                 {list}
                               </span>
                             </h6>
-                            <p className="m-0">{skill.description[idx]}</p>
+                            <p className="m-0 fw-medium">
+                              {skill.description[idx]}
+                            </p>
                           </div>
                         )}
                     </div>
