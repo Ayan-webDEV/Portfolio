@@ -339,7 +339,7 @@ const Skills = () => {
               </div>
             ))}
           </div>
-          <div className="pt-3 pt-sm-2">
+          <div className="pt-3 pt-sm-2 pb-4 pb-sm-0">
             <h3 className="text-center mt-3 mt-sm-4 px-md-4 fs-4">
               Building{" "}
               <strong style={{ color: "var(--accent-primary)" }}>
