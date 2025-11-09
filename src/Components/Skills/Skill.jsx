@@ -343,7 +343,7 @@ const Skills = () => {
             <h3 className="text-center mt-3 mt-sm-4 px-md-4 fs-4">
               Building{" "}
               <strong style={{ color: "var(--accent-primary)" }}>
-                scalable
+                extensible
               </strong>{" "}
               and{" "}
               <strong style={{ color: "var(--accent-primary)" }}>
