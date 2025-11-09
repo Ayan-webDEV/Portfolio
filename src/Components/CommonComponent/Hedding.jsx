@@ -4,6 +4,7 @@ const Hedding = ({ hds, cursor }) => {
   let count = hds.length;
 
   let skl = cursor === "»";
+  let proj = cursor === "⌘";
   // console.log(skl);
   // console.log(count);  //just for debuging
 
@@ -12,7 +13,11 @@ const Hedding = ({ hds, cursor }) => {
       <div>
         <h2 className={style.hedding}>
           {hds}
-          <span className={`${style.cursor} ${skl && style.sklCursor}`}>
+          <span
+            className={`${style.cursor} ${skl && style.sklCursor} ${
+              proj && style.projCursor
+            }`}
+          >
             {cursor}
           </span>
         </h2>
