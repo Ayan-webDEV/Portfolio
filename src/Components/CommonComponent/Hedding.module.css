@@ -27,6 +27,12 @@
   color: var(--accent-secondary);
   margin: 5px 0 0 10px;
 }
+.contactCursor {
+  animation: blink 3.7s ease-in-out infinite;
+  font-size: 4.77vw;
+  margin: 5px 0 0 8px;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
@@ -69,6 +75,9 @@
     font-size: 2.07vw;
     margin: 5.5px 0 0 10px;
   }
+  .contactCursor {
+    font-size: 3.4vw;
+  }
 
   .hightlightTextLong1 {
     width: 100px;
@@ -99,7 +108,9 @@
     font-size: 1vw;
     margin: 6px 0 0 6px;
   }
-
+  .contactCursor {
+    font-size: 1.7vw;
+  }
   .hightlightTextLong1 {
     width: 92px;
   }
