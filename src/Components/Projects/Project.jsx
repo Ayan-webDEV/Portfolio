@@ -1,10 +1,70 @@
 import style from "./Project.module.css";
-// import { useTheme } from "../../ContextStore/ContextStore";
+import { useTheme } from "../../ContextStore/ContextStore";
+
+import portfolioImgLgt from "../../assets/project-portfolio-lightTheme.png";
+import portfolioImgDrk from "../../assets/project-portfolio-darkTheme.png";
+
 import Hedding from "../CommonComponent/Hedding";
 import Divider from "../CommonComponent/Divider";
 
+import { FaGithub } from "react-icons/fa";
+
 const Project = () => {
-  //   const { darkMode } = useTheme();
+  const { darkMode } = useTheme();
+
+  const portfolio = () => {
+    window.open("https://github.com/Ayan-webDEV/Portfolio", "_Blank");
+  };
+
+  const projects = [
+    {
+      id: 1,
+      image: darkMode ? portfolioImgLgt : portfolioImgDrk,
+      title: "Personal Portfolio",
+      description:
+        "Interactive React portfolio highlighting my work, abilities, and proficiency with refined aesthetics and seamless performance.",
+      stacks: [
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "React.js",
+        "Git & Github",
+        "Vercel",
+      ],
+      link: portfolio,
+    },
+    {
+      id: 2,
+      image: null,
+      title: "Myntra Replica",
+      description:
+        "Modern React Myntra clone highlighting product catalog, adaptive UI, and seamless cart experience with polished design.",
+      stacks: [
+        "HTML5",
+        "CSS3",
+        "Tailwind",
+        "React.js",
+        "Git & Github",
+        "Vercel",
+      ],
+    },
+    {
+      id: 3,
+      image: null,
+      title: "E-Commerce",
+      description:
+        "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ",
+      stacks: [],
+    },
+    {
+      id: 4,
+      image: null,
+      title: "Chat Web App",
+      description:
+        "lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem ",
+      stacks: [],
+    },
+  ];
 
   return (
     <>
@@ -49,8 +109,8 @@ const Project = () => {
               work involves{" "}
               <span className={style.projectDetailHighlights}>MySQL</span> and{" "}
               <span className={style.projectDetailHighlights}>responsive</span>,{" "}
-              <span>user-friendly</span>
-              interfaces. Every project moves me closer to becoming a skilled{" "}
+              <span>user-friendly</span> interfaces. Every project moves me
+              closer to becoming a skilled{" "}
               <span className={style.projectDetailHighlights}>
                 full-stack developer
               </span>
@@ -120,7 +180,7 @@ const Project = () => {
               .
             </article>
           </div>
-          <div className="my-5 pb-lg-1">
+          <div className="my-5 pt-2 pb-lg-1">
             <h4 className={`${style.projectsTitle} ${style.projectsTitleMob}`}>
               Projects That Define My <br />{" "}
               <span className={style.projTitleHighLight}>Journey</span>
@@ -131,6 +191,115 @@ const Project = () => {
               Projects That Define My{" "}
               <span className={style.projTitleHighLight}>Journey</span>
             </h4>
+
+            <div className="row justify-content-sm-between justify-content-center mt-2">
+              {projects.map((project) => (
+                <div
+                  key={project.id}
+                  className={`col-12 col-sm-6 col-lg-4 ${style.projectsCard} ${
+                    !darkMode && style.projectCardLgt
+                  }`}
+                >
+                  <div>
+                    <img
+                      src={project.image}
+                      className={style.projectImg}
+                      alt=""
+                    />
+                  </div>
+                  <h4 className={style.projectName}>{project.title}</h4>
+                  <p
+                    className={style.projectDescription}
+                    style={{
+                      color: darkMode ? "#dadadaff" : "#2c2c2cff",
+                      fontFamily: "Roboto, sans-serif",
+                    }}
+                  >
+                    {project.description}
+                  </p>
+                  <p style={{ fontFamily: "Roboto, sans-serif" }}>
+                    <span className="fw-semibold">Used Stack :</span>{" "}
+                    {project.stacks.map((stack, idx) => (
+                      <span key={idx} className={style.projectStacks}>
+                        {stack}{" "}
+                      </span>
+                    ))}
+                  </p>
+                  <button
+                    className={style.viewProjectBtn}
+                    onClick={project.link}
+                  >
+                    View On Github
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div>
+              <p
+                className={`${style.projectsClosingLines} ${style.forBigScreen}`}
+              >
+                Each project reflects my commitment to developing{" "}
+                <span className="d-block">
+                  <span className={style.projectsClosingHighlights}>
+                    Robust
+                  </span>
+                  ,{" "}
+                  <span className={style.projectsClosingHighlights}>
+                    Dynamic
+                  </span>
+                  , and{" "}
+                  <span className={style.projectsClosingHighlights}>
+                    Aesthetically Refined
+                  </span>
+                </span>{" "}
+                web solutions through{" "}
+                <span className={style.projectsClosingHighlights}>Clean</span>,{" "}
+                <span className={style.projectsClosingHighlights}>Modular</span>
+                , and Well-Architected code design.
+              </p>
+              <p
+                className={`${style.projectsClosingLines} ${style.forSmallScreen}`}
+              >
+                Crafting{" "}
+                <span className={style.projectsClosingHighlights}>Robust</span>,{" "}
+                <span className={style.projectsClosingHighlights}>Dynamic</span>
+                , and{" "}
+                <span className={style.projectsClosingHighlights}>Refined</span>{" "}
+                web solutions with{" "}
+                <span className={style.projectsClosingHighlights}>Clean</span>,{" "}
+                <span className={style.projectsClosingHighlights}>Modular</span>
+                , and Well-Structured code.
+              </p>
+              <p
+                className={`${style.projectsClosingLines} ${style.forMediumScreen}`}
+              >
+                Each project reflects my commitment to building{" "}
+                <span className={style.projectsClosingHighlights}>Robust</span>,{" "}
+                <span className={style.projectsClosingHighlights}>Dynamic</span>
+                , and{" "}
+                <span className={style.projectsClosingHighlights}>Refined</span>{" "}
+                web solutions through{" "}
+                <span className={style.projectsClosingHighlights}>Clean</span>,{" "}
+                <span className={style.projectsClosingHighlights}>Modular</span>
+                , and Well-Structured code design.
+              </p>
+            </div>
+            <div className="d-flex justify-content-center ">
+              <div className={style.seeAllProjectBtnCont}>
+                <button
+                  className={style.seeAllProjectBtn}
+                  onClick={() => {
+                    window.open(
+                      "https://github.com/Ayan-webDEV?tab=repositories",
+                      "_Blank"
+                    );
+                  }}
+                >
+                  <FaGithub style={{ fontSize: "1.2rem" }} /> See All
+                  Repositories
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
