@@ -13,7 +13,6 @@ const Contact = () => {
           <Hedding hds={"Contact Me"} cursor={"💬"} />
         </div>
       </section>
-      <Divider />
     </>
   );
 };
