@@ -12,6 +12,22 @@ import { useTheme } from "../../ContextStore/ContextStore";
 const Contact = () => {
   const { darkMode } = useTheme();
 
+  const socials = [
+    {
+      id: 1,
+      icon: <FaGithubSquare />,
+      link: "https://github.com/Ayan-webDEV",
+    },
+    {
+      id: 2,
+      icon: <FaTelegram />,
+      link: "https://t.me/ayan_fs_dev",
+    },
+    { id: 3, icon: <TbBrandLinkedinFilled />, link: "" },
+    { id: 4, icon: <FaInstagramSquare />, link: "" },
+    { id: 5, icon: <FaSquareFacebook />, link: "" },
+  ];
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -64,9 +80,9 @@ const Contact = () => {
         <div className="container">
           <Hedding hds={"Contact Me"} cursor={"💬"} />
           <div
-            className={`row justify-content-around ${style.wholeContactCont} ${
-              darkMode ? style.contactDark : style.contactLight
-            }`}
+            className={`row justify-content-center justify-content-lg-around ${
+              style.wholeContactCont
+            } ${darkMode ? style.contactDark : style.contactLight}`}
           >
             <div className="col-12 col-lg-5">
               <h2
@@ -85,18 +101,29 @@ const Contact = () => {
                 Whether you have questions, feedback, or simply wish to reach
                 out — feel free to drop a message using the form.
               </p>
-              <h6 className="d-flex align-items-center">
+              <h6
+                className={`d-flex align-items-center ${style.contactConect}`}
+                onClick={() =>
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=ayan.fsdev%2Bportfolio@gmail.com&su=Portfolio%20Contact&body=Hi%20sir%2C%20I%20want%20to%20connect.",
+                    "_blank"
+                  )
+                }
+              >
                 <IoMailUnreadOutline
+                  className={style.mailIcon}
                   style={{
                     fontSize: "1.3rem",
                     color: !darkMode ? "#7A4A26" : "#38BDF8",
                   }}
                 />{" "}
-                <span className={style.getInTouchEmail}>
-                  ayan.fsdev@gmail.com
+                <span className={`ms-3 ps-2 ${style.getInTouchEmail}`}>
+                  ayan.fsdev+portfolio@gmail.com
                 </span>
               </h6>
-              <div className="d-flex align-items-center">
+              <div
+                className={`d-flex align-items-center mb-5 pb-4 mb-lg-0 pb-lg-0 ${style.contactConect}`}
+              >
                 <AiFillLike
                   style={{
                     fontSize: "1.3rem",
@@ -104,25 +131,19 @@ const Contact = () => {
                   }}
                 />
                 <div className="ms-3">
-                  <span className={style.socialIcons}>
-                    <FaGithubSquare />
-                  </span>
-                  <span className={style.socialIcons}>
-                    <FaTelegram />
-                  </span>
-                  <span className={style.socialIcons}>
-                    <TbBrandLinkedinFilled />
-                  </span>
-                  <span className={style.socialIcons}>
-                    <FaInstagramSquare />
-                  </span>
-                  <span className={style.socialIcons}>
-                    <FaSquareFacebook />
-                  </span>
+                  {socials.map((social) => (
+                    <span
+                      key={social.id}
+                      className={style.socialIcons}
+                      onClick={() => window.open(social.link, "_Blank")}
+                    >
+                      {social.icon}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
-            <div className="col-12 col-lg-5">
+            <div className={`col-12 col-lg-5 ${style.formContainer}`}>
               <form onSubmit={handleSubmit}>
                 <div>
                   <p className={style.formInputText}>
