@@ -1,6 +1,8 @@
 import style from "./Nav.module.css";
 import { useState, useEffect } from "react";
 import { useTheme } from "../../ContextStore/ContextStore";
+import Logo from "../CommonComponent/Logo";
+
 import { LuSunDim } from "react-icons/lu";
 import { FaRegMoon } from "react-icons/fa";
 
@@ -29,14 +31,15 @@ const Nav = () => {
       <nav>
         <div className="py-2 py-lg-0">
           <div className="container d-flex justify-content-between align-items-center px-4 px-lg-2">
-            <div className={style.logoCont}>
+            {/* <div className={style.logoCont}>
               <h3 className={style.logo}>
                 AM{" "}
                 <span style={{ color: "var(--accent-primary)" }}>
                   &lt; / &gt;
                 </span>
               </h3>
-            </div>
+            </div> */}
+            <Logo />
             <div className="d-flex">
               <ul className={`m-0 ${style.mobHidden}`}>
                 {navSections.map((sec) => (

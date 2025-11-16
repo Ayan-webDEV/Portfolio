@@ -8,14 +8,6 @@ nav {
   z-index: 1000;
 }
 
-.logoCont {
-  font-family: "Days One", sans-serif;
-  user-select: none;
-}
-.logo {
-  margin: 0;
-  font-size: 26px;
-}
 .mobHidden {
   display: none;
 }
@@ -78,9 +70,6 @@ nav {
 }
 
 @media (min-width: 575px) {
-  .logo {
-    font-size: 34px;
-  }
   .mobVisible {
     padding: 20px 0 !important;
   }
@@ -102,9 +91,7 @@ nav {
   .navSections {
     font-size: 18px !important;
   }
-  .logo {
-    font-size: 30px;
-  }
+
   .mobHidden {
     display: flex;
     align-items: center;
