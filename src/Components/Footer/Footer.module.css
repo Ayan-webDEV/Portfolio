@@ -1,0 +1,84 @@
+.footerStack {
+  font-size: 1.7vw;
+  font-weight: 700;
+  margin: 1.4vw 0 1vw;
+}
+
+.sectionsCont {
+  margin: 1.4vw 12% 1.8vw;
+}
+
+.sectionsLinkItem {
+  /* background-color: red; */
+  margin: 8px 0 0 0;
+}
+
+.sectionsLink {
+  text-decoration: none;
+  color: #ff4fa3;
+  font-weight: 600;
+  font-size: 1.3vw;
+  padding: 0 2.2vw;
+  border-right: 2px solid #fff;
+}
+.sectionLinkLgt {
+  color: #0080ff;
+  font-weight: 700;
+  border-right: 2px solid #000;
+}
+
+.sectionsLink:hover {
+  color: #ffcce4;
+}
+.sectionLinkLgt:hover {
+  color: #3f51b5;
+}
+
+.socialsCont {
+  cursor: pointer;
+  padding-bottom: 4px;
+  margin: 2vw 0 0 1.7vw;
+}
+.socialsIcons {
+  color: #38bdf8;
+  font-size: 1.4vw;
+  margin: 0 0.5vw 0;
+  transition: all 0.3s ease-in-out;
+}
+.socialsIconsLgt {
+  /* color: #ff7d2c; */
+  /* color: #6352dd; */
+  color: #5543d8;
+}
+.socialsName {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  transition: all 0.3s ease-in-out;
+}
+.socialsNameLgt {
+  font-weight: 700;
+}
+.socialsCont:hover .socialsIcons {
+  color: #fff;
+}
+.socialsCont:hover .socialsName {
+  color: #38bdf8;
+}
+.socialsCont:hover {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #fff;
+}
+
+.socialsContLgt:hover .socialsIconsLgt {
+  color: #424242;
+}
+.socialsContLgt:hover .socialsNameLgt {
+  /* color: #ff7d2c; */
+  /* color: #6c5ce7; */
+  color: #5543d8;
+  /* color: #009688; */
+}
+.socialsContLgt:hover {
+  border-bottom: 2px solid #424242;
+}
