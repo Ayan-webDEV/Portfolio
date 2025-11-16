@@ -34,6 +34,10 @@
   color: #3f51b5;
 }
 
+.socialWrapperCont {
+  margin: 0 4%;
+  padding: 1vw 0 0;
+}
 .socialsCont {
   cursor: pointer;
   padding-bottom: 4px;

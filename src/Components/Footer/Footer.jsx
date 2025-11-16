@@ -23,15 +23,15 @@ const Footer = () => {
       icon: <FaGithub />,
       link: "https://github.com/Ayan-webDEV",
     },
-    { id: 2, name: "Linkedin", icon: <FaLinkedin /> },
+    { id: 2, name: "Linkedin", icon: <FaLinkedin />, link: "" },
     {
       id: 3,
       name: "Telegram",
       icon: <FaTelegram />,
       link: "https://t.me/ayan_fs_dev",
     },
-    { id: 4, name: "Instagram", icon: <FaInstagram /> },
-    { id: 5, name: "Twitter (X)", icon: <FaXTwitter /> },
+    { id: 4, name: "Instagram", icon: <FaInstagram />, link: "" },
+    { id: 5, name: "Twitter (X)", icon: <FaXTwitter />, link: "" },
   ];
 
   return (
@@ -53,7 +53,7 @@ const Footer = () => {
             <div className="text-center pb-3">
               <Logo />
             </div>
-            <div className="col-12 text-center">
+            <div className="text-center">
               <h3 className={style.footerStack}>
                 <span className="d-inline-block me-2">
                   {" "}
@@ -88,10 +88,7 @@ const Footer = () => {
                 className={`d-flex flex-column flex-md-row flex-wrap justify-content-evenly ${style.sectionsCont}`}
               >
                 {sectionLinks.map((section) => (
-                  <div
-                    key={section.id}
-                    className={section.id === 5 ? style.sectionsLinkItem : ""}
-                  >
+                  <div key={section.id} className={style.sectionsLinkItem}>
                     <a
                       className={`${style.sectionsLink} ${
                         !darkMode && style.sectionLinkLgt
@@ -108,7 +105,9 @@ const Footer = () => {
                 ))}
               </div>
             </div>
-            <div className="d-flex flex-wrap justify-content-evenly">
+            <div
+              className={`d-flex flex-wrap justify-content-evenly ${style.socialWrapperCont}`}
+            >
               {socialLinks.map((social) => (
                 <div
                   key={social.id}
@@ -116,7 +115,7 @@ const Footer = () => {
                     !darkMode && style.socialsContLgt
                   }`}
                   onClick={() => window.open(social.link, "_Blank")}
-                  style={{ marginTop: social.id === 5 ? "8px" : "" }}
+                  style={{ marginTop: "8px" }}
                 >
                   <span
                     className={`${style.socialsIcons} ${
