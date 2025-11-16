@@ -3,7 +3,7 @@ import style from "./Logo.module.css";
 const Logo = () => {
   return (
     <div className={style.logoCont}>
-      <h3 className={style.logo}>
+      <h3 className={style.logo} onClick={() => window.location.reload()}>
         AM <span style={{ color: "var(--accent-primary)" }}>&lt; / &gt;</span>
       </h3>
     </div>
