@@ -1,4 +1,5 @@
 import style from "./Footer.module.css";
+import { useState, useEffect } from "react";
 import { useTheme } from "../../ContextStore/ContextStore";
 import Logo from "../CommonComponent/Logo";
 
@@ -7,6 +8,15 @@ import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const { darkMode } = useTheme();
+
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const sectionLinks = [
     { id: 1, name: "Home", link: "#home" },
@@ -45,12 +55,19 @@ const Footer = () => {
       <div className="container pt-5 pb-3">
         <div className="row justify-content-center align-items-center">
           <div
-            className="col-lg-5"
+            className="col-12 col-lg-5"
             style={{
-              borderRight: `2px solid ${darkMode ? "#1f1f41ff" : "#a5a5a5ff"}`,
+              borderRight:
+                width >= 992
+                  ? `2px solid ${darkMode ? "#1f1f41ff" : "#a5a5a5ff"}`
+                  : "",
+              borderBottom:
+                width < 992
+                  ? `2px solid ${darkMode ? "#1f1f41ff" : "#a5a5a5ff"}`
+                  : "",
             }}
           >
-            <div className="text-center pb-3">
+            <div className="text-center pt-4 pt-sm-0 pb-3">
               <Logo />
             </div>
             <div className="text-center">
@@ -67,7 +84,9 @@ const Footer = () => {
                 </span>{" "}
                 <br />
                 <span
-                  className="d-inline-block my-1"
+                  className={`d-inline-block my-1 ${
+                    style.footerStacksVariationDivider
+                  } ${!darkMode ? style.footerStacksVariationDividerLgt : ""}`}
                   style={{ color: "var(--accent-primary)" }}
                 >
                   &
@@ -82,62 +101,84 @@ const Footer = () => {
               </h3>
             </div>
           </div>
-          <div className="col-lg-7 px-lg-0">
-            <div>
-              <div
-                className={`d-flex flex-column flex-md-row flex-wrap justify-content-evenly ${style.sectionsCont}`}
-              >
-                {sectionLinks.map((section) => (
-                  <div key={section.id} className={style.sectionsLinkItem}>
-                    <a
-                      className={`${style.sectionsLink} ${
-                        !darkMode && style.sectionLinkLgt
-                      } `}
-                      style={{
-                        borderRight:
-                          section.id === 4 || section.id === 5 ? "none" : "",
-                      }}
-                      href={section.link}
-                    >
-                      {section.name}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div
-              className={`d-flex flex-wrap justify-content-evenly ${style.socialWrapperCont}`}
-            >
-              {socialLinks.map((social) => (
+          <div className="col-12 col-lg-7 px-lg-0">
+            <div className="row mt-sm-5 mt-lg-0 ">
+              <div className="col-12 col-sm-6 col-lg-12 ">
                 <div
-                  key={social.id}
-                  className={`${style.socialsCont} ${
-                    !darkMode && style.socialsContLgt
-                  }`}
-                  onClick={() => window.open(social.link, "_Blank")}
-                  style={{ marginTop: "8px" }}
+                  className={`d-flex flex-column flex-sm-row flex-wrap justify-content-sm-around justify-content-lg-evenly ${style.sectionsCont}`}
                 >
-                  <span
-                    className={`${style.socialsIcons} ${
-                      !darkMode && style.socialsIconsLgt
-                    }`}
-                  >
-                    {social.icon}
-                  </span>{" "}
-                  <span
-                    className={`${style.socialsName} ${
-                      !darkMode && style.socialsNameLgt
-                    }`}
-                  >
-                    {social.name}
-                  </span>
+                  {sectionLinks.map((section) => (
+                    <div
+                      key={section.id}
+                      className={`${style.sectionsLinkItem} ${
+                        width >= 575 && !darkMode && section.id !== 5
+                          ? style.sectionsLinkItemLgt
+                          : ""
+                      } ${
+                        width < 575 && !darkMode
+                          ? style.sectionLinkItemLgtMob
+                          : ""
+                      }`}
+                      style={{
+                        borderRight: section.id === 5 ? "none" : "",
+                      }}
+                    >
+                      <a
+                        className={`${style.sectionsLink} ${
+                          !darkMode && style.sectionLinkLgt
+                        } `}
+                        href={section.link}
+                      >
+                        {section.name}
+                      </a>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div
+                className="col-12 col-sm-6 col-lg-12 mt-sm-3 mt-lg-0"
+                style={{
+                  borderLeft:
+                    width >= 575 && width <= 992
+                      ? `2px solid ${darkMode ? "#1f1f41ff" : "#a5a5a5ff"} `
+                      : "",
+                }}
+              >
+                <div
+                  className={`d-flex flex-wrap justify-content-evenly ${style.socialWrapperCont}`}
+                >
+                  {socialLinks.map((social) => (
+                    <div
+                      key={social.id}
+                      className={`${style.socialsCont} ${
+                        !darkMode && style.socialsContLgt
+                      }`}
+                      onClick={() => window.open(social.link, "_Blank")}
+                      style={{ marginTop: "8px" }}
+                    >
+                      <span
+                        className={`${style.socialsIcons} ${
+                          !darkMode && style.socialsIconsLgt
+                        }`}
+                      >
+                        {social.icon}
+                      </span>{" "}
+                      <span
+                        className={`${style.socialsName} ${
+                          !darkMode && style.socialsNameLgt
+                        }`}
+                      >
+                        {social.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
           {/* Lower Footer */}
-          <div className="col-12 text-center mt-5">
+          <div className="col-12 text-center mt-4 mt-sm-5">
             <div
               className="pt-3"
               style={{
