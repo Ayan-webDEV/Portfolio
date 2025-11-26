@@ -120,6 +120,14 @@
   background-color: var(--accent-secondary);
   color: var(--accent-text);
 }
+.viewSite {
+  color: var(--accent-primary);
+  border: 2px solid var(--accent-primary);
+  /* margin-right: 10px !important; */
+}
+.viewSite:hover {
+  background-color: var(--accent-primary);
+}
 
 .forBigScreen {
   display: none;
@@ -327,10 +335,13 @@
     letter-spacing: 0.03vw;
   }
   .viewProjectBtn {
-    margin: 4px 0 6px;
+    margin: 4px 0 6px 10px;
     padding: 8px 14px;
     font-size: 14px;
     letter-spacing: 0.025vw;
+  }
+  .viewSite {
+    margin-right: 10px;
   }
 
   .forBigScreen {

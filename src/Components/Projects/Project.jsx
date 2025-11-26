@@ -3,6 +3,7 @@ import { useTheme } from "../../ContextStore/ContextStore";
 
 import portfolioImgLgt from "../../assets/project-portfolio-lightTheme.png";
 import portfolioImgDrk from "../../assets/project-portfolio-darkTheme.png";
+import myntraImg from "../../assets/myntra-project.png";
 
 import Hedding from "../CommonComponent/Hedding";
 import Divider from "../CommonComponent/Divider";
@@ -14,6 +15,9 @@ const Project = () => {
 
   const portfolio = () => {
     window.open("https://github.com/Ayan-webDEV/Portfolio", "_Blank");
+  };
+  const myntra = () => {
+    window.open("https://github.com/Ayan-webDEV/myntra-replica", "_Blank");
   };
 
   const projects = [
@@ -32,10 +36,11 @@ const Project = () => {
         "Vercel",
       ],
       link: portfolio,
+      site: () => window.location.reload(),
     },
     {
       id: 2,
-      image: null,
+      image: myntraImg,
       title: "Myntra Replica",
       description:
         "Modern React Myntra clone highlighting product catalog, adaptive UI, and seamless cart experience with polished design.",
@@ -47,6 +52,8 @@ const Project = () => {
         "Git & Github",
         "Vercel",
       ],
+      link: myntra,
+      site: () => window.open("https://myntra-replica-am.vercel.app", "_Blank"),
     },
     {
       id: 3,
@@ -225,12 +232,20 @@ const Project = () => {
                       </span>
                     ))}
                   </p>
-                  <button
-                    className={style.viewProjectBtn}
-                    onClick={project.link}
-                  >
-                    View On Github
-                  </button>
+                  <div className="d-flex flex-wrap justify-content-between mt-2">
+                    <button
+                      className={style.viewProjectBtn}
+                      onClick={project.link}
+                    >
+                      View On Github
+                    </button>
+                    <button
+                      className={`${style.viewProjectBtn} ${style.viewSite}`}
+                      onClick={project.site}
+                    >
+                      view site
+                    </button>
+                  </div>
                 </div>
               ))}
             </div>
