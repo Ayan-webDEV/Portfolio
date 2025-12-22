@@ -23,7 +23,17 @@ import {
   FaCode,
   FaUserFriends,
 } from "react-icons/fa";
-import { SiRedux, SiTailwindcss, SiSpringboot } from "react-icons/si";
+
+import {
+  SiRedux,
+  SiTailwindcss,
+  SiSpringboot,
+  SiApachemaven,
+} from "react-icons/si";
+import { BiLogoPostgresql } from "react-icons/bi";
+import { GrMysql } from "react-icons/gr";
+import { DiRedis } from "react-icons/di";
+
 import { MdDevices, MdApi, MdPsychology } from "react-icons/md";
 import { FaVial } from "react-icons/fa6"; // from Font Awesome 6
 import { useState } from "react";
@@ -39,7 +49,7 @@ const Skills = () => {
   const skills = [
     {
       id: 1,
-      hedding: "Frontend Stack",
+      hedding: "Frontend Tech",
       hdsIcon: <FaLaptopCode />,
       stackList: [
         "HTML5",
@@ -53,15 +63,15 @@ const Skills = () => {
         "Responsive Design",
       ],
       icons: [
-        <FaHtml5 style={{ color: "#E44D26", fontSize: "20px" }} />,
-        <FaCss3Alt style={{ color: "#1572B6", fontSize: "20px" }} />,
-        <FaJsSquare style={{ color: "#F7DF1E", fontSize: "20px" }} />,
-        <FaReact style={{ color: "#61DAFB", fontSize: "20px" }} />,
-        <SiRedux style={{ color: "#764ABC", fontSize: "20px" }} />,
-        <FaBootstrap style={{ color: "#7952B3", fontSize: "20px" }} />,
-        <SiTailwindcss style={{ color: "#38BDF8", fontSize: "20px" }} />,
-        <FaFigma style={{ color: "#F24E1E", fontSize: "20px" }} />,
-        <MdDevices style={{ color: "#00C4CC", fontSize: "20px" }} />,
+        <FaHtml5 style={{ color: "#E44D26", fontSize: "21px" }} />,
+        <FaCss3Alt style={{ color: "#1572B6", fontSize: "21px" }} />,
+        <FaJsSquare style={{ color: "#F7DF1E", fontSize: "21px" }} />,
+        <FaReact style={{ color: "#61DAFB", fontSize: "21px" }} />,
+        <SiRedux style={{ color: "#764ABC", fontSize: "21px" }} />,
+        <FaBootstrap style={{ color: "#7952B3", fontSize: "21px" }} />,
+        <SiTailwindcss style={{ color: "#38BDF8", fontSize: "21px" }} />,
+        <FaFigma style={{ color: "#F24E1E", fontSize: "21px" }} />,
+        <MdDevices style={{ color: "#00C4CC", fontSize: "21px" }} />,
       ],
       description: [
         "Defines web structure using semantic tags, media support, and accessibility features, forming the backbone of responsive and modern website development.",
@@ -78,35 +88,59 @@ const Skills = () => {
     },
     {
       id: 2,
-      hedding: "Backend Stack",
+      hedding: "Backend Tech",
       hdsIcon: <FaServer />,
       stackList: [
         "Java",
+        "Maven",
         "Spring Boot",
         "MySQL",
+        "PostgreSQL",
         "API Integration",
         "Git & GitHub",
         "JUnit",
+        "Redis",
       ],
       icons: [
-        <FaJava style={{ color: "#f89820", fontSize: "20px" }} />,
-        <SiSpringboot style={{ color: "#6DB33F", fontSize: "20px" }} />,
-        <FaDatabase style={{ color: "#4479A1", fontSize: "20px" }} />,
-        <MdApi style={{ color: "#FF6F00", fontSize: "20px" }} />,
-        <FaGithub
-          style={{ color: darkMode ? "#fefefe" : "#181717", fontSize: "20px" }}
+        <FaJava style={{ color: "#f89820", fontSize: "21px" }} />,
+        <SiApachemaven
+          style={{
+            color: "#D54D2C",
+            backgroundImage:
+              "linear-gradient(100deg, #FF9A3C, #FF5E7E, #B84CFF)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            display: "inline-flex",
+            fontSize: "21px",
+          }}
         />,
-        <FaVial style={{ color: "#25A162", fontSize: "20px" }} />,
+        <SiSpringboot style={{ color: "#6DB33F", fontSize: "21px" }} />,
+        <GrMysql style={{ color: "#4479A1", fontSize: "21px" }} />,
+        <BiLogoPostgresql
+          style={{
+            color: "#31648C",
+            fontSize: "25px",
+          }}
+        />,
+        <MdApi style={{ color: "#FF6F00", fontSize: "21px" }} />,
+        <FaGithub
+          style={{ color: darkMode ? "#fefefe" : "#181717", fontSize: "21px" }}
+        />,
+        <FaVial style={{ color: "#25A162", fontSize: "21px" }} />,
+        <DiRedis style={{ color: "#D5362B", fontSize: "28px" }} />,
       ],
       description: [
         "",
+        "Experienced with Maven for build automation, dependency management, project lifecycle handling, and Java application packaging.",
         "Simplifies Java backend creation with auto-configuration, REST APIs, and production-ready tools for efficient, scalable applications.",
-        "",
+        "Hands-on expertise in MySQL schema design, indexing strategies, integrity constraints, query optimization, administrative tools, and backend system connectivity.",
+        "Experience with normalization, indexing, constraints, performance optimization, pgAdmin, and PostgreSQL integration with backend applications systems projects.",
         "Connects software systems for seamless data exchange, automation, and enhanced functionality across multiple applications.",
         "Version control tools enabling collaboration, change tracking, branching, and efficient code management in team environments.",
         "Java testing framework ensuring code reliability by automating unit tests and detecting bugs early in development.",
+        "Experienced with Redis for in-memory data storage, caching, session management, pub/sub messaging, and high-performance applications.",
       ],
-      status: [false, true, false, true, true, true],
+      status: [false, true, true, true, true, true, true, true, true],
     },
     {
       id: 3,
@@ -114,10 +148,10 @@ const Skills = () => {
       hdsIcon: <FaCode />,
       stackList: ["JavaScript", "Java", "Python", "SQL"],
       icons: [
-        <FaJsSquare style={{ color: "#F7DF1E", fontSize: "20px" }} />,
-        <FaJava style={{ color: "#f89820", fontSize: "20px" }} />,
-        <FaPython style={{ color: "#3776AB", fontSize: "20px" }} />,
-        <FaDatabase style={{ color: "#4479A1", fontSize: "20px" }} />,
+        <FaJsSquare style={{ color: "#F7DF1E", fontSize: "21px" }} />,
+        <FaJava style={{ color: "#f89820", fontSize: "21px" }} />,
+        <FaPython style={{ color: "#3776AB", fontSize: "21px" }} />,
+        <FaDatabase style={{ color: "#4479A1", fontSize: "21px" }} />,
       ],
       description: [
         "Adds interactivity and logic to websites, enabling dynamic content, event handling, and smooth user experiences through modern web frameworks.",
@@ -138,10 +172,10 @@ const Skills = () => {
         "Creativity",
       ],
       icons: [
-        <FaComments style={{ color: "#0A84FF", fontSize: "20px" }} />,
-        <MdPsychology style={{ color: "#FFB100", fontSize: "20px" }} />,
-        <FaRegClock style={{ color: "#34C759", fontSize: "20px" }} />,
-        <FaLightbulb style={{ color: "#FFD60A", fontSize: "20px" }} />,
+        <FaComments style={{ color: "#0A84FF", fontSize: "21px" }} />,
+        <MdPsychology style={{ color: "#FFB100", fontSize: "21px" }} />,
+        <FaRegClock style={{ color: "#34C759", fontSize: "21px" }} />,
+        <FaLightbulb style={{ color: "#FFD60A", fontSize: "21px" }} />,
       ],
     },
   ];
@@ -270,8 +304,15 @@ const Skills = () => {
                             setHoveredItem({ skillId: null, index: null });
                           }}
                         >
-                          <span className="me-2 pe-1">{skill.icons[idx]}</span>
+                          <span
+                            className={`me-3 ${
+                              list === "PostgreSQL" ? style.postgresql : ""
+                            } ${list === "Redis" ? style.redis : ""}`}
+                          >
+                            {skill.icons[idx]}
+                          </span>
                           {list}
+                          {console.log(list)}
                           {skill.id !== 4 && skill.status[idx] && (
                             <IoMdArrowDropdown
                               className={`ms-2 ${style.dropDown} ${
@@ -339,7 +380,7 @@ const Skills = () => {
               </div>
             ))}
           </div>
-          <div className="pt-3 pt-sm-2 pb-4 pb-sm-0">
+          <div className="pt-3 mt-2 pt-sm-2 pb-4 pb-sm-0">
             <h3 className="text-center mt-3 mt-sm-4 px-md-4 fs-4">
               Building{" "}
               <strong style={{ color: "var(--accent-primary)" }}>
