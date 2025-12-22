@@ -31,6 +31,13 @@
   cursor: pointer;
 }
 
+.postgresql {
+  margin: 0 -3px 0;
+}
+.redis {
+  margin: 0 -6.5px 0;
+}
+
 .stackSkillNoDetailsCursor {
   cursor: default;
 }
