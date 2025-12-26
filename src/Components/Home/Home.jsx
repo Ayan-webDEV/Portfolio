@@ -29,7 +29,8 @@ const Home = () => {
       id: 2,
       icon: <FaLinkedin />,
       name: "LinkedIn",
-      handleClick: () => window.open("", "_blank"),
+      handleClick: () =>
+        window.open("https://www.linkedin.com/in/ayan-alam-dev", "_blank"),
     },
     {
       id: 3,

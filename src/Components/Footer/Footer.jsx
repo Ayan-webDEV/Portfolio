@@ -33,7 +33,12 @@ const Footer = () => {
       icon: <FaGithub />,
       link: "https://github.com/Ayan-webDEV",
     },
-    { id: 2, name: "Linkedin", icon: <FaLinkedin />, link: "" },
+    {
+      id: 2,
+      name: "Linkedin",
+      icon: <FaLinkedin />,
+      link: "https://www.linkedin.com/in/ayan-alam-dev",
+    },
     {
       id: 3,
       name: "Telegram",

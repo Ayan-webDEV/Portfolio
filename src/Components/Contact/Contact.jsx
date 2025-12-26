@@ -23,7 +23,11 @@ const Contact = () => {
       icon: <FaTelegram />,
       link: "https://t.me/ayan_fs_dev",
     },
-    { id: 3, icon: <TbBrandLinkedinFilled />, link: "" },
+    {
+      id: 3,
+      icon: <TbBrandLinkedinFilled />,
+      link: "https://www.linkedin.com/in/ayan-alam-dev",
+    },
     { id: 4, icon: <FaInstagramSquare />, link: "" },
     { id: 5, icon: <FaSquareFacebook />, link: "" },
   ];
